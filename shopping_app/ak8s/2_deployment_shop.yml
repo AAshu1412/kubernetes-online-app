@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: online-shop-deployment
+  namespace: online-shop-ns
+  labels:
+    app: online-shop-dep
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: online-shop-podd
+
+  template:
+    metadata:
+      name: online-shop-pod
+      namespace: online-shop-ns
+      labels:
+        app: online-shop-podd
+
+    spec:
+      containers:
+      - name: online-shop-container
+        image: aashu1412/shoping_app:v1
+        ports:
+        - containerPort: 5173
