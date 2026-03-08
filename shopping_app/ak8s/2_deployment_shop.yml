@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: online-shop-container
-        image: aashu1412/shoping_app:v2
+        image: aashu1412/shoping_app:v3
         ports:
-        - containerPort: 5173
+        - containerPort: 80

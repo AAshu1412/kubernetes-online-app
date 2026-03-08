@@ -18,7 +18,7 @@ spec:
             name: online-shop-service
             port:
               # port number where my service is running
-              number: 5173
+              number: 80
       - pathType: Prefix
         path: /apache
         backend:
